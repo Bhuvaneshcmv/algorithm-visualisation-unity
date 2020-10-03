@@ -12,7 +12,7 @@ public class CubePrefabScript : MonoBehaviour
     private void LoadValues()
     {
         height = gameObject.transform.localScale.y;
-        CubeMeshRenderer = this.gameObject.GetComponent<MeshRenderer>();
+        CubeMeshRenderer = gameObject.GetComponent<MeshRenderer>();
         CubeMeshRenderer.material.color =  Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
     }
 
