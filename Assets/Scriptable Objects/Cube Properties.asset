@@ -13,16 +13,18 @@ MonoBehaviour:
   m_Name: Cube Properties
   m_EditorClassIdentifier: Assembly-CSharp::Cube
   numberOfCubes: 10
-  startingPostion: {x: -7.5, y: 1, z: 0}
+  startingPostion: {x: -0.5, y: 0, z: 0}
+  maxHeight: 10
+  minHeight: 5
   cubePostions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
+  - {x: -0.5, y: 0, z: 0}
+  - {x: 1.2, y: 0, z: 0}
+  - {x: 2.9, y: 0, z: 0}
+  - {x: 4.6000004, y: 0, z: 0}
+  - {x: 6.3, y: 0, z: 0}
+  - {x: 8, y: 0, z: 0}
+  - {x: 9.700001, y: 0, z: 0}
+  - {x: 11.400001, y: 0, z: 0}
+  - {x: 13.1, y: 0, z: 0}
+  - {x: 14.8, y: 0, z: 0}
   cubeHeights: []

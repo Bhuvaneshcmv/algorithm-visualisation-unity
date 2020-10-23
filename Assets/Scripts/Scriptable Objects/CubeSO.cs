@@ -5,7 +5,11 @@ public class Cube : ScriptableObject
 {
     public int numberOfCubes;
     public Vector3 startingPostion;
-    
+    public int maxHeight;
+    public int minHeight;
+
+    [HideInInspector]
     public Vector3[] cubePostions;
+    [HideInInspector]
     public float[] cubeHeights;
 }
