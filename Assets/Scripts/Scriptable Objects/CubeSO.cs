@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [CreateAssetMenu(fileName = "Cube Properties", menuName = "ScriptableObjects / Cubes")]
-public class Cube : ScriptableObject
+public class CubeSO : ScriptableObject
 {
     public int numberOfCubes;
     public Vector3 startingPostion;

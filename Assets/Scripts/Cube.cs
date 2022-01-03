@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 
-public class CubePrefabScript : MonoBehaviour
+public class Cube : MonoBehaviour
 {
     public float height;
     public MeshRenderer CubeMeshRenderer;
+    public bool isMoving;
 
     private void Awake()
     {
@@ -15,5 +16,10 @@ public class CubePrefabScript : MonoBehaviour
         height = gameObject.transform.localScale.y;
         CubeMeshRenderer = gameObject.GetComponent<MeshRenderer>();
         CubeMeshRenderer.material.color =  Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
+    }
+
+    public void Move()
+    {
+
     }
 }
