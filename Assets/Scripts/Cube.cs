@@ -2,6 +2,7 @@
 
 public class Cube : MonoBehaviour
 {
+    [HideInInspector]
     public float height;
     public MeshRenderer CubeMeshRenderer;
     public bool isMoving;

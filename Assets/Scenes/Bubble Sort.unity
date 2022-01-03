@@ -436,7 +436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeSO: {fileID: 11400000, guid: 17159c3405e249b42b95c42e27c02355, type: 2}
-  cubeGO: {fileID: 3128651872742753737, guid: 9a44f4baf5b992547bfde9eda14cec47, type: 3}
+  cubeGO: {fileID: 7805961403503482876, guid: 9a44f4baf5b992547bfde9eda14cec47, type: 3}
   cubesParent: {fileID: 1356535796}
 --- !u!850595691 &1688377632
 LightingSettings:
