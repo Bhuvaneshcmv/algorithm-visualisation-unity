@@ -10,7 +10,8 @@ public class GameManager : MonoBehaviour
     Transform cubesParent;
     Cube[] cubeContainer;
     bool moveComplete;
-    
+
+    float time = 1000;
 
     private void Start()
     {
@@ -50,21 +51,23 @@ public class GameManager : MonoBehaviour
 
     void moveTheCube(Cube cube, Vector3 finalPos)
     {
-        Vector3 initialPos = cube.transform.localPosition;
+        //Vector3 initialPos = cube.transform.localPosition;
 
-        int moveDirection = 0;
-        if (finalPos.x - initialPos.x > 0) moveDirection = 1;
-        if (finalPos.x - initialPos.x < 0) moveDirection = -1;
+        //int moveDirection = 0;
+        //if (finalPos.x - initialPos.x > 0) moveDirection = 1;
+        //if (finalPos.x - initialPos.x < 0) moveDirection = -1;
 
-        cube.transform.Translate(Vector3.right * Time.deltaTime * moveDirection);
+        //cube.transform.Translate(Vector3.right * Time.deltaTime * moveDirection);
 
-        if((moveDirection==1 && cube.transform.localPosition.x >= finalPos.x) || (moveDirection == -1 && cube.transform.localPosition.x <= finalPos.x))
-        {
-            finalPos.y = cube.transform.localScale.y / 2;
-            cube.transform.localPosition = finalPos;
-            moveComplete = true;
-            return;
-        }
+        //if((moveDirection==1 && cube.transform.localPosition.x >= finalPos.x) || (moveDirection == -1 && cube.transform.localPosition.x <= finalPos.x))
+        //{
+        //    finalPos.y = cube.transform.localScale.y / 2;
+        //    cube.transform.localPosition = finalPos;
+        //    moveComplete = true;
+        //    return;
+        //}
+        //cube.Move(finalPos, time);
+        cube.SetTargetPosAndTime(finalPos, 100);
     }
 
 
@@ -73,18 +76,18 @@ public class GameManager : MonoBehaviour
         if (moveComplete == true)
         {
             moveComplete = false;
-            for (int i = 0; i < 10; i++)
-            {
-                for (int j = i; j < 10; j++)
+            //for (int i = 0; i < 10; i++)
+            //{
+                for (int j = 0; j < 10; j++)
                 {
-                    if (cubeContainer[j].transform.localScale.y < cubeContainer[i].transform.localScale.y)
-                    {   
-                        moveTheCube(cubeContainer[j], cubeSO.cubePostions[i]);
+                    //if (cubeContainer[j].transform.localScale.y < cubeContainer[i].transform.localScale.y)
+                    //{   
+                        moveTheCube(cubeContainer[j], Vector3.zero);
                         /* tempInt = numberArray[i];
                          numberArray[i] = numberArray[j];
                          numberArray[j] = tempInt;*/
-                    }
-                }
+                    //}
+                //}
             }
         }
     }

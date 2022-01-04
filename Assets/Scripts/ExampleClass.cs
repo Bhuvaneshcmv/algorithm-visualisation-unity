@@ -1,36 +1,12 @@
-﻿using UnityEngine;
+// A longer example of Vector3.Lerp usage.
+// Drop this script under an object in your scene, and specify 2 other objects in the "startMarker"/"endMarker" variables in the script inspector window.
+// At play time, the script will move the object along a path between the position of those two markers.
 
-public class Cube : MonoBehaviour
+using UnityEngine;
+using System.Collections;
+
+public class ExampleClass : MonoBehaviour
 {
-    [HideInInspector]
-    public float height;
-    public MeshRenderer CubeMeshRenderer;
-    public bool isMoving;
-    private Vector3 targetPos;
-    float time;
-
-    private void Awake()
-    {
-        LoadValues();
-    }
-
-    private void LoadValues()
-    {
-        height = gameObject.transform.localScale.y;
-        CubeMeshRenderer = gameObject.GetComponent<MeshRenderer>();
-        CubeMeshRenderer.material.color =  Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
-    }
-
-    public void SetTargetPosAndTime(Vector3 targetPosition, float timeToMove)
-    {
-        targetPos = targetPosition;
-        time = timeToMove;
-        
-    }
-    void MoveCube()
-    {
-        transform.position = Vector3.Lerp(transform.position, targetPos, time);
-    }
     // Transforms to act as start and end markers for the journey.
     public Transform startMarker;
     public Transform endMarker;
